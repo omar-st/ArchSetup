@@ -34,7 +34,7 @@ tools=("nano  vim  mutt  kitty  timeshift  downgrade  ventoy-bin")
 files=("unrar  unzip  dos2unix  transmission-gtk  qdirstat-bin")
 fun=("tetris  nsnake  csol  mtpaint  sl  tty-clock  termdown")
 media=("pipewire-alsa  cmus  vlc  mpv  ffmpeg  yt-dlp")
-langs=("python-pipx  nodejs  npm")
+langs=("python-pipx  nodejs  npm  gnome-boxes")
 edit=("audacity  sublime-text-4  sioyek-appimage  qt6-multimedia-ffmpeg  shotcut")
 pac=("pacseek-bin  bauh  flatpak  libxcrypt-compat  brew")
 desk=("google-chrome  firefox  wayland  gnome")
@@ -54,7 +54,7 @@ _setAlias() {
     alias ai-mini='ollama run qwen:0.5b'
     alias ai-code='ollama run granite-code' "  >> ~/.bashrc
 }
-#dconf dump /org/gnome/terminal/legacy/profiles:/:
+
 _setProfile() {
     gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$1/ $2 $3;
 }
@@ -149,11 +149,15 @@ _finish() {
     _startDesktop
 }
 
-#Dev Tools:     code  eclipse-platform  waveterm-bin  nmap  virtualbox  ventoy
-
+#Dev Tools:     code  eclipse-platform  waveterm-bin  nmap  virtualbox 
 #Office Suit:   libreoffice-fresh  thunderbird  pidgin  gimp
 #               sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
 
-_init
-_installer
-_finish
+_main() {
+    _init
+    _installer
+    _finish
+}
+########
+
+_main
