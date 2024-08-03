@@ -1,6 +1,6 @@
-**Arch Setup Script**
+# Arch Setup Script
 
-# Omar Streete's Installation Script
+## Omar Streete's Installation Script
 
 A simple bash script designed for Arch Linux users to install a variety of packages with one command.
 Specificially, this is the script I wrote to reinstall my programs when I change machines. It is tried and tested.
