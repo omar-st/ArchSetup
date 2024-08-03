@@ -49,7 +49,7 @@ _setAlias() {
     alias apps='bauh'
     alias appstore=pacseek
 
-    alias ai='ollama run llama3'
+    alias ai='ollama run llama3.1'
     alias ai-g='ollama run gemma2:2b'
     alias ai-mini='ollama run qwen:0.5b'
     alias ai-code='ollama run granite-code' 
