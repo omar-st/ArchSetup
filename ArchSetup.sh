@@ -37,7 +37,7 @@ media=("pipewire-alsa  cmus  vlc  mpv  ffmpeg  yt-dlp")
 langs=("python-pipx  nodejs  npm  gnome-boxes")
 edit=("audacity  sublime-text-4  sioyek-appimage  qt6-multimedia-ffmpeg  shotcut")
 pac=("pacseek-bin  bauh  flatpak  libxcrypt-compat  brew")
-desk=("google-chrome  firefox  wayland  gnome")
+desk=("google-chrome  firefox  wayland")
 
 
 _setAlias() {
@@ -52,7 +52,9 @@ _setAlias() {
     alias ai='ollama run llama3'
     alias ai-g='ollama run gemma2:2b'
     alias ai-mini='ollama run qwen:0.5b'
-    alias ai-code='ollama run granite-code' "  >> ~/.bashrc
+    alias ai-code='ollama run granite-code' 
+
+    PATH="$PATH:/home/libre/.local/bin""  >> ~/.bashrc
 }
 
 _setProfile() {
