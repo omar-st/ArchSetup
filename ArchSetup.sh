@@ -32,7 +32,7 @@ term=("tmux  mc  fzf  exa  tldr  wiki-tui  links")
 sys=("htop  neofetch  dust  nmon  sysstat  psensor  hwdetect")
 tools=("nano  vim  mutt  kitty  timeshift  downgrade  ventoy-bin")
 files=("unrar  unzip  dos2unix  transmission-gtk  qdirstat-bin")
-fun=("tetris  nsnake  csol  mtpaint  sl  tty-clock  termdown")
+fun=("sc  tetris  nsnake  csol  mtpaint  sl  tty-clock  termdown")
 media=("pipewire-alsa  cmus  vlc  mpv  ffmpeg  yt-dlp")
 langs=("python-pipx  nodejs  npm  gnome-boxes")
 edit=("audacity  sublime-text-4  sioyek-appimage  qt6-multimedia-ffmpeg  shotcut")
@@ -51,7 +51,7 @@ _setAlias() {
 
     alias ai='ollama run llama3.1'
     alias ai-g='ollama run gemma2:2b'
-    alias ai-mini='ollama run qwen:0.5b'
+    alias ai-mini='ollama run qwen2:0.5b'
     alias ai-code='ollama run granite-code' 
 
     PATH="$PATH:/home/libre/.local/bin""  >> ~/.bashrc
@@ -108,7 +108,7 @@ _addFOSSai() {
     curl -fsSL https://ollama.com/install.sh | sh
     ollama pull llama3.1
     ollama pull gemma2:2b
-    ollama pull qwen:0.5b
+    ollama pull qwen2:0.5b
     ollama pull granite-code
     ollama list
 }
