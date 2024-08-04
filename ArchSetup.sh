@@ -97,8 +97,10 @@ setWallpaper() {
     gsettings set org.gnome.desktop.background picture-uri file://${path}
     cd ~;
 }
-_setVol() {
+_setAudio() {
     pactl -- set-sink-volume 0 300%
+    sudo systemctl enable bluetooth
+    sudo systemctl start bluetooth
 }
 _addBottles() {
     flatpak install flathub com.usebottles.bottles
@@ -123,7 +125,7 @@ _installer() {
     _setTerminalProfile;
     _setTmux;
     _tmuxConf;
-    _setVol;
+    _setAudio;
     _setWallpaper;
     _addBottles;
     _addFOSSai;
